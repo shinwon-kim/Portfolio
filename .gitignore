@@ -26,6 +26,5 @@ dist-ssr
 # Firebase 
 .env
 .env.local
-firebaseConfig.js
-firebaseConfig.ts
 serviceAccountKey.json
+.firebasedb.ts
