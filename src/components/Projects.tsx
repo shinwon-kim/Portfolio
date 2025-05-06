@@ -77,7 +77,7 @@ const Projects = (): JSX.Element => {
                                     
                                 <TechLogo 
                                     logo={project.techStack} 
-                                    className="!flex !flex-wrap !gap-1 lg:!gap-2 self-center"
+                                    className="!flex !flex-wrap !gap-1 self-center"
                                     imgClassName="!w-6 !h-6 lg:!w-7 lg:!h-7 !shadow-md">
                                 </TechLogo>
                             </div>
@@ -88,9 +88,9 @@ const Projects = (): JSX.Element => {
             {
                 selectedProject  && (
                     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur">
-                        <div className="bg-white py-6 px-1 rounded-lg overflow-hidden w-full max-w-[1000px] mx-4 sm:mx-10 max-h-[90vh] shadow-xl relative">
+                        <div className="bg-white py-3 lg:py-6 px-1 rounded-lg overflow-hidden w-full max-w-[1000px] mx-3 sm:mx-10 max-h-[90vh] shadow-xl relative">
 
-                            <div className="overflow-y-auto max-h-[calc(90vh-48px)] px-5 pb-8">
+                            <div className="overflow-y-auto max-h-[calc(90vh-48px)] px-3 lg:px-5 pb-8">
                                 <button
                                     onClick={() => setSelectedProject(null)} 
                                     className="absolute top-0 right-4 text-grayColor2 hover:text-black text-2xl"

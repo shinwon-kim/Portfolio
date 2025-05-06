@@ -71,7 +71,7 @@ const Carousel = ({slides}: CarouselProps):JSX.Element => {
                 <IoIosArrowDropright className="text-navyColor text-xl" />
             </button>
 
-            <div className="absolute z-30 flex -translate-x-1/2 -bottom-3 left-1/2 gap-3 p-2">
+            <div className="absolute z-30 flex -translate-x-1/2 bottom-2 lg:-bottom-3 left-1/2 gap-3 p-2">
                 {
                     slides.map((_,index)=>(
                         <button key={index} type="button" 

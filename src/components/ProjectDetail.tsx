@@ -103,7 +103,7 @@ const ProjectDetail = ({project}: ProjectDetailProps):JSX.Element =>{
                 }
 
                 <div>
-                    <div className="flex items-center gap-1 lg:gap-3 mb-2">
+                    <div className="flex items-center gap-1 lg:gap-3 lg:mb-2">
                         <TiStarburst className="text-blueColor"/>
                         <h4 className="text-base lg:text-lg text-navyColor">Screenshots</h4>
                     </div>
