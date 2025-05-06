@@ -14,8 +14,8 @@ const ProjectDetail = ({project}: ProjectDetailProps):JSX.Element =>{
 
     return(
         <>
-            <h3 className="flex justify-center items-center mb-3">{project.title}</h3>
-            <div className="flex gap-4 justify-center items-center mb-4 text-sm text-grayColor2">
+            <h3 className="flex justify-center items-center mb-3 mt-1 text-base lg:text-xl">{project.title}</h3>
+            <div className="flex gap-4 justify-center items-center mb-4 text-xs lg:text-sm text-grayColor2">
                 <p>{project.count}</p>
                 <p>{project.period}</p>
             </div>
@@ -23,9 +23,9 @@ const ProjectDetail = ({project}: ProjectDetailProps):JSX.Element =>{
                 <div>
                     <div className="flex items-center gap-3 mb-2">
                         <TiStarburst className="text-blueColor"/>
-                        <h4>Project Overview</h4>
-                    </div>
-                    <p>
+                        <h4 className="text-base lg:text-lg">Project Overview</h4>
+                    </div> 
+                    <p className="text-sm lg:text-base">
                         {project.description}
                     </p>
                 </div>
@@ -33,28 +33,28 @@ const ProjectDetail = ({project}: ProjectDetailProps):JSX.Element =>{
                 <div>
                     <div className="flex items-center gap-3 mb-2">
                         <TiStarburst className="text-blueColor"/>
-                        <h4>Tech Stack</h4>
+                        <h4 className="text-base lg:text-lg">Tech Stack</h4>
                     </div>
                     <TechLogo 
                         logo={project.techStack} 
-                        className="!flex !flex-wrap !gap-3"
-                        imgClassName="!w-8 !h-8">
+                        className="!flex !flex-wrap !gap-1 lg:!gap-3"
+                        imgClassName="!w-6 !h-6 lg:!w-8 lg:!h-8">
                     </TechLogo>
                 </div>
 
                 <div>
                     <div className="flex items-center gap-3 mb-2">
                         <TiStarburst className="text-blueColor"/>
-                        <h4>My Role</h4>
+                        <h4 className="text-base lg:text-lg">My Role</h4>
                     </div>
-                    <div>
+                    <div className="text-sm lg:text-base">
                         {project.myRole.split('\n').map((line, index) => {
                             const isSubItem = line.trim().startsWith('-');
 
                             return (
                             <p
                                 key={index}
-                                className={`py-1 ${isSubItem ? "pl-6 text-sm" : "pt-1"}`}
+                                className={`py-1 ${isSubItem ? "pl-6 text-xs lg:text-sm" : "pt-1"}`}
                             >
                                 {line.trim()}
                             </p>
@@ -85,7 +85,7 @@ const ProjectDetail = ({project}: ProjectDetailProps):JSX.Element =>{
                         >
                             <img 
                                 src={selectedImage} 
-                                className="max-w-4xl max-h-[90vh] object-contain rounded-lg shadow-lg"
+                                className="max-w-base lg:max-w-4xl max-h-[90vh] object-contain rounded-lg shadow-lg"
                                 onClick={(e) => e.stopPropagation()} 
                             />
 
@@ -96,7 +96,7 @@ const ProjectDetail = ({project}: ProjectDetailProps):JSX.Element =>{
                 <div>
                     <div className="flex items-center gap-3 mb-2">
                         <TiStarburst className="text-blueColor"/>
-                        <h4>Screenshots</h4>
+                        <h4 className="text-base lg:text-lg">Screenshots</h4>
                     </div>
                         <Carousel slides={project.screenshots}></Carousel>
 

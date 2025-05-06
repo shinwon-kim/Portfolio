@@ -47,7 +47,7 @@ const AboutMe = (): JSX.Element => {
         <div className="flex flex-col gap-12">
           {/* Education */}
           <div className="grid grid-cols-[1fr_2fr] gap-3 animate-in">
-            <p className="py-10 px-15 text-3xl font-bold bg-blueColor rounded-sm text-white flex justify-center items-center shadow-lg">
+            <p className="px-7 py-9 text-xl lg:px-15 lg:py-10 lg:text-3xl font-bold bg-blueColor rounded-sm text-white flex justify-center items-center shadow-lg">
               Education
             </p>
             <div className="flex flex-col justify-center">
@@ -61,7 +61,7 @@ const AboutMe = (): JSX.Element => {
           {/* Skills & Tools */}
           <div className="grid grid-cols-[2fr_1fr] gap-3 animate-in">
             {/* <p className="py-10 px-15 text-3xl font-bold bg-[#343434] rounded-sm text-white flex justify-center items-center order-2 shadow-lg"> */}
-            <p className="py-10 px-15 text-3xl font-bold bg-[#132351] rounded-sm text-white flex justify-center items-center order-2 shadow-lg">
+            <p className="px-5 py-9 text-xl lg:px-15 lg:py-10 lg:text-3xl font-bold bg-[#132351] rounded-sm text-white flex justify-center items-center order-2 shadow-lg">
               Skills & Tools
             </p>
             <div className="flex justify-end items-center">
@@ -84,14 +84,14 @@ const AboutMe = (): JSX.Element => {
 
           {/* Certificate */}
           <div className="grid grid-cols-[1fr_2fr] gap-3 animate-in">
-            <p className="py-10 px-15 text-3xl font-bold bg-grayColor3 rounded-sm flex justify-center items-center shadow-lg">
+            <p className="px-7 py-7 text-xl lg:px-15 lg:py-10 lg:text-3xl font-bold bg-grayColor3 rounded-sm flex justify-center items-center shadow-lg">
               Certificate
             </p>
             <div>
               {certificate.map((item, index) => (
                 <div key={index} className="mb-2">
                   <p className="text-base font-semibold">{item.name}</p>
-                  <p className="text-xxs">{item.detail}</p>
+                  <p className="text-xxs text-grayColor2">{item.detail}</p>
                 </div>
               ))}
             </div>

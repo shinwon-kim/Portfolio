@@ -58,7 +58,7 @@ const Projects = (): JSX.Element => {
         <Layout id="projects" className="">
             <div className="mb-6 text-center">
                 <h1 className="mb-2">Projects</h1>
-                <p className="text-xs text-grayColor2 ">클릭 시 세부 내용을 확인 할  수 있습니다.</p>
+                <p className="text-xs text-grayColor2">클릭 시 세부 내용을 확인 할  수 있습니다.</p>
             </div>
             <div className="w-full flex justify-center">
 
@@ -77,8 +77,8 @@ const Projects = (): JSX.Element => {
                                     
                                 <TechLogo 
                                     logo={project.techStack} 
-                                    className="!flex !flex-wrap !gap-3 self-center"
-                                    imgClassName="!w-7 !h-7 !shadow-md">
+                                    className="!flex !flex-wrap !gap-2 lg:!gap-3 self-center"
+                                    imgClassName="!w-6 !h-6 lg:!w-7 lg:!h-7 !shadow-md">
                                 </TechLogo>
                             </div>
                         ))
@@ -88,12 +88,12 @@ const Projects = (): JSX.Element => {
             {
                 selectedProject  && (
                     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur">
-                        <div className="bg-white py-6 px-2 rounded-lg overflow-hidden w-full max-w-[1000px] mx-4 sm:mx-10 max-h-[90vh] shadow-xl relative">
+                        <div className="bg-white py-6 px-1 rounded-lg overflow-hidden w-full max-w-[1000px] mx-4 sm:mx-10 max-h-[90vh] shadow-xl relative">
 
                             <div className="overflow-y-auto max-h-[calc(90vh-48px)] px-5 pb-8">
                                 <button
                                     onClick={() => setSelectedProject(null)} 
-                                    className="absolute top-0 right-6 text-grayColor2 hover:text-black text-2xl"
+                                    className="absolute top-0 right-4 text-grayColor2 hover:text-black text-2xl"
                                 >
                                     &times;
                                 </button>
