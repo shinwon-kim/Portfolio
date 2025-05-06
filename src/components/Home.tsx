@@ -67,7 +67,7 @@ const Home = (): JSX.Element => {
       <div ref={containerRef}
         className="relative flex flex-col gap-5 justify-center items-center"
       >
-        <h1 className="text-2xl sm:text-3xl mt-5 font-bold">
+        <h1 className="text-2xl sm:text-3xl mt-5 font-bold text-nowrap">
           프론트엔드 개발자{" "}
           <span className="relative inline-flex" ref={nameRef}>
             {["김", "신", "원"].map((char, i) => (
@@ -99,7 +99,7 @@ const Home = (): JSX.Element => {
         </p>
         
         {/* <p>#문제해결 능력 #커뮤니케이션 능력 #책임감 #끈기 #성실</p> */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-[-80px]">
+        <div className="absolute left-1/2 transform -translate-x-1/2 -bottom-[75px]">
           <FaAnglesDown className="text-2xl m-2 animate-bounce text-blueColor"/>
         </div>
 

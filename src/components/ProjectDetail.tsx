@@ -21,9 +21,9 @@ const ProjectDetail = ({project}: ProjectDetailProps):JSX.Element =>{
             </div>
             <div className="flex flex-col gap-8 lg:gap-10">
                 <div>
-                    <div className="flex items-center gap-3 mb-2">
+                    <div className="flex items-center gap-2 lg:gap-3 mb-2">
                         <TiStarburst className="text-blueColor"/>
-                        <h4 className="text-base lg:text-lg">Project Overview</h4>
+                        <h4 className="text-base lg:text-lg text-navyColor">Project Overview</h4>
                     </div> 
                     <p className="text-sm lg:text-base">
                         {project.description}
@@ -31,9 +31,9 @@ const ProjectDetail = ({project}: ProjectDetailProps):JSX.Element =>{
                 </div>
 
                 <div>
-                    <div className="flex items-center gap-3 mb-2">
+                    <div className="flex items-center gap-2 lg:gap-3 mb-2">
                         <TiStarburst className="text-blueColor"/>
-                        <h4 className="text-base lg:text-lg">Tech Stack</h4>
+                        <h4 className="text-base lg:text-lg text-navyColor">Tech Stack</h4>
                     </div>
                     <TechLogo 
                         logo={project.techStack} 
@@ -43,20 +43,29 @@ const ProjectDetail = ({project}: ProjectDetailProps):JSX.Element =>{
                 </div>
 
                 <div>
-                    <div className="flex items-center gap-3 mb-2">
+                    <div className="flex items-center gap-2 lg:gap-3 mb-2">
                         <TiStarburst className="text-blueColor"/>
-                        <h4 className="text-base lg:text-lg">My Role</h4>
+                        <h4 className="text-base lg:text-lg text-navyColor">Role & Responsibilities</h4>
                     </div>
                     <div className="text-sm lg:text-base">
                         {project.myRole.split('\n').map((line, index) => {
                             const isSubItem = line.trim().startsWith('-');
+
+                            const match = line.trim().match(/^(-|\d+\.)\s?(.*)$/);
+                            const prefix = match ? match[1] : null;
+                            const content = match ? match[2] : line;
 
                             return (
                             <p
                                 key={index}
                                 className={`py-1 ${isSubItem ? "pl-6 text-xs lg:text-sm" : "pt-1"}`}
                             >
-                                {line.trim()}
+                                {prefix && (
+                                <span className="text-blueColor font-semibold mr-1">
+                                    {prefix}
+                                </span>
+                                )}
+                                {content}
                             </p>
                             );
                         })}
@@ -94,9 +103,9 @@ const ProjectDetail = ({project}: ProjectDetailProps):JSX.Element =>{
                 }
 
                 <div>
-                    <div className="flex items-center gap-3 mb-2">
+                    <div className="flex items-center gap-2 lg:gap-3 mb-2">
                         <TiStarburst className="text-blueColor"/>
-                        <h4 className="text-base lg:text-lg">Screenshots</h4>
+                        <h4 className="text-base lg:text-lg text-navyColor">Screenshots</h4>
                     </div>
                         <Carousel slides={project.screenshots}></Carousel>
 
