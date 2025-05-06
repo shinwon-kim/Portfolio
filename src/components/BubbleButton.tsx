@@ -24,8 +24,8 @@ const BubbleButton = () => {
     // Top Left Circle Animation
     tl1.to($circlesTopLeft, {
       duration: 1,
-      x: -25,
-      y: 25,
+      x: () => window.innerWidth < 768 ? -15 : -25,
+      y: () => window.innerWidth < 768 ? 35 : 25,
       ease: Elastic.easeOut.config(0.1, 0.7),
     })
       .to($circlesTopLeft[0], { scale: 0.2, x: "+=2", y: "-=15", duration: 0.1 })
@@ -38,8 +38,8 @@ const BubbleButton = () => {
     // Bottom Right Circle Animation
     tl2.to($circlesBottomRight, {
       duration: 1,
-      x: 20,
-      y: 30,
+      x: () => window.innerWidth < 768 ? 17 : 20,
+      y: () => window.innerWidth < 768 ? 35 : 30,
       ease: Elastic.easeOut.config(0.1, 0.7),
     })
       .to($circlesBottomRight[0], { scale: 0.7, x: "-=6", y: "+=8", duration: 0.1 })
@@ -159,7 +159,7 @@ const BubbleButton = () => {
       </svg>
 
       <p
-        className="absolute flex items-center justify-center text-7xl lg:text-9xl text-white/90 font-bold text-center z-10"
+        className="absolute flex items-center justify-center text-7xl sm:text-8xl lg:text-9xl text-white/90 font-bold text-center z-10"
         style={{
           textShadow: "-.02em .02em #D0D1D4",
         }}
@@ -179,7 +179,7 @@ const BubbleButton = () => {
           {createCircles(topLeftCircles, `absolute -top-[140px] -left-[3px] ${isHovered ? "opacity-100" : "opacity-0"}`)}
           <div
             ref={effectRef}
-            className="absolute top-1/2 left-1/2 w-[270px] h-[270px] lg:w-[300px] lg:h-[300px] -translate-x-1/2 -translate-y-1/2"
+            className="absolute top-1/2 left-1/2 w-[270px] h-[270px] sm:w-[285px] sm:h-[285px] lg:w-[300px] lg:h-[300px] -translate-x-1/2 -translate-y-1/2"
           >
             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
               <g transform="translate(100 100)">

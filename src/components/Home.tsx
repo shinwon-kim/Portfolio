@@ -67,7 +67,7 @@ const Home = (): JSX.Element => {
       <div ref={containerRef}
         className="relative flex flex-col gap-5 justify-center items-center"
       >
-        <h1 className="text-2xl lg:text-3xl mt-5 font-bold">
+        <h1 className="text-2xl sm:text-3xl mt-5 font-bold">
           프론트엔드 개발자{" "}
           <span className="relative inline-flex" ref={nameRef}>
             {["김", "신", "원"].map((char, i) => (
