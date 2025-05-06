@@ -17,7 +17,7 @@ const ContactBadge=(): JSX.Element =>{
     }
     
     return(
-        <div className="fixed bottom-10 right-0.5 flex flex-col gap-2 lg:right-30 lg:gap-3">
+        <div className="fixed bottom-10 right-1.5 flex flex-col gap-2 lg:right-30 lg:gap-3">
             {/* 이메일 아이콘 */}
             <div 
                 className="relative"

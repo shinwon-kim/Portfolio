@@ -14,7 +14,7 @@ html, body {
 :root{
   color: #1C1C1E;
   font-weight: 500;
-  background: #FAFAFAFA;
+  background: #FAFAFA;
   font-family: "Noto Sans KR", sans-serif;
 }
 
@@ -36,9 +36,10 @@ h4{
   --color-blueColor : #0061FF;
   --color-navyColor : #132351;
   --color-grayColor : #E7E8EE;
-  --color-grayColor2 : #D0D1D4;
+  --color-grayColor2 : #ABABAB;
+  /* --color-grayColor2 : #D0D1D4; */
   --color-grayColor3 : #ECECEC;
-  --color-baseColor: #1F1F1F;
+  --color-whiteColor: #FAFAFA;
   --color-blackColor: #343434;
   --text-xxs: 0.625rem; /* 10px */
   --text-xxs--line-height: calc(1.25 / 0.625); /* 2 */
