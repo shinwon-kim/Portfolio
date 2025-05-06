@@ -8,7 +8,7 @@ interface LayoutProps {
 
 const Layout = ({ id, className, children }: LayoutProps) => {
   return (
-    <div id={id} className={`w-full max-w-[1200px] mx-auto py-20 px-4 md:px-8 min-h-screen ${className}`}>
+    <div id={id} className={`w-full max-w-[1200px] mx-auto px-4 py-20 md:px-8 min-h-screen flex flex-col justify-center items-center ${className}`}>
         {children}
     </div>
 

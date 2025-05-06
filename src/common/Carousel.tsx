@@ -62,7 +62,7 @@ const Carousel = ({slides}: CarouselProps):JSX.Element => {
                 >
                     <img 
                         src={selectedImage} 
-                        className="max-w-4xl max-h-[90vh] object-contain rounded-lg shadow-lg"
+                        className="max-w-base lg:max-w-4xl max-h-[90vh] object-contain rounded-lg shadow-lg"
                         onClick={(e) => e.stopPropagation()} 
                     />
                 </div>

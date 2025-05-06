@@ -45,16 +45,16 @@ const Career = (): JSX.Element => {
                 {careerData.map((item, index) => (
                     <div
                         key={index}
-                        className="career-card w-full max-w-3xl bg-white shadow-xl p-6 rounded-lg grid grid-cols-[1fr_4fr] gap-4"
+                        className="career-card w-full lg:max-w-4xl bg-white shadow-xl p-6 rounded-lg grid grid-cols-[1fr_4fr] gap-4"
                     >
                         <div className="flex items-center gap-3">
                             <TiStarburst className="text-sm text-blueColor"/>
-                            <p className="text-xs font-medium text-gray-500">{item.date}</p>
+                            <p className="text-xs font-medium text-grayColor2">{item.date}</p>
                         </div>
                         <div className="space-y-1">
-                            <h4 className="text-lg font-semibold text-gray-900">{item.companyName}</h4>
-                            <p className="text-sm font-medium text-blue-600 ">{item.position}</p>
-                            <p className="text-sm text-gray-600 ">{item.detail}</p>
+                            <h4 className="text-lg font-semibold text-blackColor">{item.companyName}</h4>
+                            <p className="text-sm font-medium text-blueColor ">{item.position}</p>
+                            <p className="text-sm text-grayColor2">{item.detail}</p>
                         </div>
                     </div>
                 ))}

@@ -159,7 +159,7 @@ const BubbleButton = () => {
       </svg>
 
       <p
-        className="absolute flex items-center justify-center text-9xl text-white/90 font-bold text-center z-10"
+        className="absolute flex items-center justify-center text-7xl lg:text-9xl text-white/90 font-bold text-center z-10"
         style={{
           textShadow: "-.02em .02em #D0D1D4",
         }}
@@ -179,7 +179,7 @@ const BubbleButton = () => {
           {createCircles(topLeftCircles, `absolute -top-[140px] -left-[3px] ${isHovered ? "opacity-100" : "opacity-0"}`)}
           <div
             ref={effectRef}
-            className="absolute top-1/2 left-1/2 w-[300px] h-[300px] -translate-x-1/2 -translate-y-1/2"
+            className="absolute top-1/2 left-1/2 w-[270px] h-[270px] lg:w-[300px] lg:h-[300px] -translate-x-1/2 -translate-y-1/2"
           >
             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
               <g transform="translate(100 100)">
