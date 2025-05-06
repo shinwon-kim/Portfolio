@@ -33,7 +33,7 @@ const Carousel = ({slides}: CarouselProps):JSX.Element => {
     return(
         <div className="relative flex justify-center items-center mx-5">
             <button type="button" onClick={prevSlide} className="cursor-pointer">
-                <IoIosArrowDropleft className="text-blueColor text-xl"/>
+                <IoIosArrowDropleft className="text-navyColor text-xl"/>
             </button>
 
             <div className="w-full m-2 p-1 rounded-5 overflow-hidden">
@@ -68,14 +68,14 @@ const Carousel = ({slides}: CarouselProps):JSX.Element => {
             )}
 
             <button type="button" onClick={nextSlide} className="cursor-pointer">
-                <IoIosArrowDropright className="text-blueColor text-xl" />
+                <IoIosArrowDropright className="text-navyColor text-xl" />
             </button>
 
             <div className="absolute z-30 flex -translate-x-1/2 -bottom-3 left-1/2 gap-3 p-2">
                 {
                     slides.map((_,index)=>(
                         <button key={index} type="button" 
-                            className={`w-2 h-2 rounded-full ${index === currentSlide ? "bg-blueColor w-7" : "bg-blueColor/30"}`}
+                            className={`w-2 h-2 rounded-full ${index === currentSlide ? "bg-navyColor w-7" : "bg-navyColor/30"}`}
                             aria-current={index === currentSlide}
                             aria-label={`Slide ${index+1}`}
                             onClick={()=>goToSlide(index)}
