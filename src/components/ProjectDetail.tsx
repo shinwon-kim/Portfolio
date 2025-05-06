@@ -19,7 +19,7 @@ const ProjectDetail = ({project}: ProjectDetailProps):JSX.Element =>{
                 <p>{project.count}</p>
                 <p>{project.period}</p>
             </div>
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-8 lg:gap-10">
                 <div>
                     <div className="flex items-center gap-3 mb-2">
                         <TiStarburst className="text-blueColor"/>
@@ -37,8 +37,8 @@ const ProjectDetail = ({project}: ProjectDetailProps):JSX.Element =>{
                     </div>
                     <TechLogo 
                         logo={project.techStack} 
-                        className="!flex !flex-wrap !gap-1 lg:!gap-3"
-                        imgClassName="!w-6 !h-6 lg:!w-8 lg:!h-8">
+                        className="!flex !flex-wrap !gap-2 lg:!gap-3"
+                        imgClassName="!w-7 !h-7 lg:!w-8 lg:!h-8">
                     </TechLogo>
                 </div>
 

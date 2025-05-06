@@ -37,14 +37,13 @@ const Carousel = ({slides}: CarouselProps):JSX.Element => {
             </button>
 
             <div className="w-full m-2 p-1 rounded-5 overflow-hidden">
-
                 <div className="flex transition-transform duration-700 ease-in-out" 
                     style={{ transform: `translateX(-${currentSlide * 100}%)` }}
                 >
                     {slides.map((src, index)=>(
                         <div key={index} className="w-full flex-shrink-0 ">
                            <img src={src} 
-                                className="w-full h-[300px] object-contain cursor-zoom-in"
+                                className="w-full h-[260px] lg:h-[290px] object-contain cursor-zoom-in"
                                 onClick={() => {
                                     setSelectedImage(src);
                                     setIsModalOpen(true);
