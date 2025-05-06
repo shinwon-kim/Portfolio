@@ -75,7 +75,7 @@ const Carousel = ({slides}: CarouselProps):JSX.Element => {
                 {
                     slides.map((_,index)=>(
                         <button key={index} type="button" 
-                            className={`w-2 h-2 rounded-full ${index === currentSlide ? "bg-navyColor w-7" : "bg-navyColor/30"}`}
+                            className={`w-2 h-2 rounded-full ${index === currentSlide ? "bg-navyColor/90 w-7" : "bg-navyColor/30"}`}
                             aria-current={index === currentSlide}
                             aria-label={`Slide ${index+1}`}
                             onClick={()=>goToSlide(index)}

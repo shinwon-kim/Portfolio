@@ -77,7 +77,7 @@ const Projects = (): JSX.Element => {
                                     
                                 <TechLogo 
                                     logo={project.techStack} 
-                                    className="!flex !flex-wrap !gap-2 self-center"
+                                    className="!flex !flex-wrap !gap-1 lg:!gap-2 self-center"
                                     imgClassName="!w-6 !h-6 lg:!w-7 lg:!h-7 !shadow-md">
                                 </TechLogo>
                             </div>

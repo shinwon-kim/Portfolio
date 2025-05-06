@@ -14,14 +14,14 @@ const ProjectDetail = ({project}: ProjectDetailProps):JSX.Element =>{
 
     return(
         <>
-            <h3 className="flex justify-center items-center mb-3 mt-1 text-base lg:text-xl">{project.title}</h3>
+            <h3 className="flex justify-center items-center mb-3 mt-1 text-base lg:text-xl font-bold">{project.title}</h3>
             <div className="flex gap-4 justify-center items-center mb-4 text-xs lg:text-sm text-grayColor2">
                 <p>{project.count}</p>
                 <p>{project.period}</p>
             </div>
             <div className="flex flex-col gap-8 lg:gap-10">
                 <div>
-                    <div className="flex items-center gap-2 lg:gap-3 mb-2">
+                    <div className="flex items-center gap-1 lg:gap-3 mb-2">
                         <TiStarburst className="text-blueColor"/>
                         <h4 className="text-base lg:text-lg text-navyColor">Project Overview</h4>
                     </div> 
@@ -31,19 +31,19 @@ const ProjectDetail = ({project}: ProjectDetailProps):JSX.Element =>{
                 </div>
 
                 <div>
-                    <div className="flex items-center gap-2 lg:gap-3 mb-2">
+                    <div className="flex items-center gap-1 lg:gap-3 mb-2">
                         <TiStarburst className="text-blueColor"/>
                         <h4 className="text-base lg:text-lg text-navyColor">Tech Stack</h4>
                     </div>
                     <TechLogo 
                         logo={project.techStack} 
-                        className="!flex !flex-wrap !gap-2 lg:!gap-3"
-                        imgClassName="!w-7 !h-7 lg:!w-8 lg:!h-8">
+                        className="!flex !flex-wrap !gap-1 lg:!gap-3"
+                        imgClassName="!w-6 !h-6 lg:!w-8 lg:!h-8">
                     </TechLogo>
                 </div>
 
                 <div>
-                    <div className="flex items-center gap-2 lg:gap-3 mb-2">
+                    <div className="flex items-center gap-1 lg:gap-3 mb-2">
                         <TiStarburst className="text-blueColor"/>
                         <h4 className="text-base lg:text-lg text-navyColor">Role & Responsibilities</h4>
                     </div>
@@ -103,7 +103,7 @@ const ProjectDetail = ({project}: ProjectDetailProps):JSX.Element =>{
                 }
 
                 <div>
-                    <div className="flex items-center gap-2 lg:gap-3 mb-2">
+                    <div className="flex items-center gap-1 lg:gap-3 mb-2">
                         <TiStarburst className="text-blueColor"/>
                         <h4 className="text-base lg:text-lg text-navyColor">Screenshots</h4>
                     </div>
