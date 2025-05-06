@@ -17,7 +17,7 @@ const TechLogo = ({ logo, className, imgClassName }: LogoProps):JSX.Element => {
                     return (
                         <div key={index} className="relative group">
                             <img 
-                                src={`/public/program_logo/${logo}`} 
+                                src={`/program_logo/${logo}`} 
                                 className={`w-11 h-11 bg-white object-scale-down rounded-sm shadow-xl ${imgClassName}`} 
                                 alt={name}>
                             </img>
