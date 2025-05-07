@@ -52,7 +52,7 @@ const AboutMe = (): JSX.Element => {
             </p>
             <div className="flex flex-col justify-center">
               <p className="text-mb font-semibold">아주대학교</p>
-              <p className="text-sm">
+              <p className="text-xs lg:text-sm">
                 불어불문학과 전공 
                 <br/>
                 소프트웨어 및 컴퓨터 공학과 복수전공
