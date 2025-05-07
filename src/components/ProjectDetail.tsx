@@ -15,7 +15,7 @@ const ProjectDetail = ({project}: ProjectDetailProps):JSX.Element =>{
     return(
         <>
             <h3 className="flex justify-center items-center mb-3 mt-1 text-base lg:text-xl font-bold">{project.title}</h3>
-            <div className="flex gap-4 justify-center items-center mb-4 text-xs lg:text-sm text-grayColor2">
+            <div className="flex gap-4 justify-center items-center mb-10 text-xs lg:text-sm text-grayColor2">
                 <p>{project.count}</p>
                 <p>{project.period}</p>
             </div>

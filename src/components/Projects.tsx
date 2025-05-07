@@ -88,8 +88,7 @@ const Projects = (): JSX.Element => {
             {
                 selectedProject  && (
                     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur">
-                        <div className="bg-white py-3 lg:py-6 px-1 rounded-lg overflow-hidden w-full max-w-[1000px] mx-3 sm:mx-10 max-h-[90vh] shadow-xl relative">
-
+                        <div className="bg-white py-7 px-1 sm:rounded-lg overflow-hidden w-full max-w-[1000px] h-screen sm:mx-10 sm:max-h-[90vh] shadow-xl relative">
                             <div className="overflow-y-auto max-h-[calc(90vh-48px)] px-3 lg:px-5 pb-8">
                                 <button
                                     onClick={() => setSelectedProject(null)} 
