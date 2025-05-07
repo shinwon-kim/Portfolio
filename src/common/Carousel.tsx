@@ -56,7 +56,7 @@ const Carousel = ({slides}: CarouselProps):JSX.Element => {
 
             {isModalOpen && selectedImage && (
                 <div 
-                    className="fixed inset-0 bg-black/60 flex items-center justify-center z-50"
+                    className="fixed inset-0 bg-black/50 backdrop-blur flex items-center justify-center z-50"
                     onClick={() => setIsModalOpen(false)}
                 >
                     <img 
@@ -71,11 +71,11 @@ const Carousel = ({slides}: CarouselProps):JSX.Element => {
                 <IoIosArrowDropright className="text-navyColor text-xl" />
             </button>
 
-            <div className="absolute z-30 flex -translate-x-1/2 bottom-2 lg:-bottom-3 left-1/2 gap-3 p-2">
+            <div className="absolute z-30 flex -translate-x-1/2 -bottom-2 lg:-bottom-6 left-1/2 gap-3 p-2">
                 {
                     slides.map((_,index)=>(
                         <button key={index} type="button" 
-                            className={`w-2 h-2 rounded-full ${index === currentSlide ? "bg-navyColor/90 w-7" : "bg-navyColor/30"}`}
+                            className={`w-2 h-2 rounded-full ${index === currentSlide ? "bg-navyColor/90 " : "bg-navyColor/30"}`}
                             aria-current={index === currentSlide}
                             aria-label={`Slide ${index+1}`}
                             onClick={()=>goToSlide(index)}
