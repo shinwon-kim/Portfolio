@@ -15,7 +15,7 @@ const TechLogo = ({ logo, className, imgClassName }: LogoProps):JSX.Element => {
                 techStack.map((logo, index)=> {
                     const name = logo.split(".")[0];
                     return (
-                        <div key={index} className="relative group aspect-square w-8 h-8 lg:w-11 lg:h-11">
+                        <div key={index} className="relative group aspect-square w-9 h-9 lg:w-10 lg:h-10">
                             <img 
                                 src={`/program_logo/${logo}`} 
                                 className={`w-full h-full object-contain bg-white rounded-sm shadow-xl ${imgClassName}`} 
