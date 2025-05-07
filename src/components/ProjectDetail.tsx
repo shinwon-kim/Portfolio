@@ -55,8 +55,10 @@ const ProjectDetail = ({project}: ProjectDetailProps):JSX.Element =>{
                             const prefix = match ? match[1] : null;
                             const content = match ? match[2] : line;
 
+                            const [beforeColon, afterColon] = content.split(':').map(str => str.trim());
+
                             return (
-                            <p
+                            <div
                                 key={index}
                                 className={`py-1 ${isSubItem ? "pl-6 text-xs lg:text-sm" : "pt-1"}`}
                             >
@@ -65,11 +67,19 @@ const ProjectDetail = ({project}: ProjectDetailProps):JSX.Element =>{
                                     {prefix}
                                 </span>
                                 )}
-                                {content}
-                            </p>
+                                {afterColon ? (
+                                <>
+                                    <span className="text-xs lg:text-sm text-blueColor">{beforeColon}:</span>{' '}
+                                    <span className="text-xs lg:text-sm text-[#909090]">{afterColon}</span>
+                                </>
+                                ) : (
+                                <span className="font-bold">{content} </span>
+                                )}
+                            </div>
                             );
                         })}
-                    </div>
+                     </div>
+
 
                     {
                         project.img && (
@@ -89,7 +99,7 @@ const ProjectDetail = ({project}: ProjectDetailProps):JSX.Element =>{
                 </div>
                 {
                     isModalOpen && selectedImage && (
-                        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50"
+                        <div className="fixed inset-0 bg-black/50 backdrop-blur flex items-center justify-center z-50"
                             onClick={()=>setIsModalOpen(false)}
                         >
                             <img 
