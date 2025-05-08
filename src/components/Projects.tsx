@@ -65,17 +65,17 @@ const Projects = (): JSX.Element => {
                         projects.map((project) => (
                             <div
                                 key={project.id}
-                                className="project-card flex flex-col justify-between text-center w-full sm:w-[350px] h-60 bg-white border-2 border-gray-100 rounded-lg px-2 py-3 transition-all duration-300 cursor-pointer shadow-xl hover:-translate-y-1 hover:border-blueColor"
+                                className="project-card flex flex-col justify-between text-center w-full sm:w-[350px] h-50 lg:h-60 bg-white border-2 border-gray-100 rounded-lg px-2 py-3 transition-all duration-300 cursor-pointer shadow-xl hover:-translate-y-1 hover:border-blueColor"
                                 onClick={() => handleProjectClick(project)}
                             >
                                 <div>
-                                    <h4 className="mb-4">{project.title}</h4>
-                                    <p className="text-sm">{project.preview}</p>
+                                    <p className="mt-1 mb-4 text-mb lg:text-lg font-bold">{project.title}</p>
+                                    <p className="text-xs lg:text-sm">{project.preview}</p>
                                 </div>
                                     
                                 <TechLogo 
                                     logo={project.techStack} 
-                                    className="!flex !flex-wrap !gap-1 self-center"
+                                    className="!flex !flex-wrap !gap-0 self-center"
                                     imgClassName="!w-6 !h-6 lg:!w-7 lg:!h-7 !shadow-md">
                                 </TechLogo>
                             </div>
