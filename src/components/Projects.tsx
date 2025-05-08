@@ -7,9 +7,8 @@ import TechLogo from "../common/TechLogo";
 import ProjectDetail from "./ProjectDetail";
 import { ProjectsData } from "../types/projectData"; 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { FaLink , FaGithub } from "react-icons/fa";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
-
-// gsap.registerPlugin(useGSAP);
 
 const Projects = (): JSX.Element => {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -23,7 +22,6 @@ const Projects = (): JSX.Element => {
         };
         fetchData();
     }, [])
-
 
     useGSAP(() => {
         if (!containerRef.current) return;
@@ -90,9 +88,22 @@ const Projects = (): JSX.Element => {
                     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur">
                         <div className="bg-white py-7 px-1 sm:rounded-lg overflow-hidden w-full max-w-[1000px] h-screen sm:mx-10 sm:max-h-[90vh] shadow-xl relative">
                             <div className="overflow-y-auto max-h-[calc(90vh-5px)] sm:max-h-[calc(90vh-48px)] px-3 lg:px-5 pb-8">
+                                <div className="flex gap-3 absolute top-2 left-4 text-grayColor2 text-sm sm:text-base">
+                                    {selectedProject?.demo && (
+                                        <a className="hover:text-black" href={selectedProject.demo} target="_blank" rel="noopener noreferrer">
+                                            <FaLink />
+                                        </a>
+                                    )}
+                                    { selectedProject?.github && (
+
+                                        <a className="hover:text-black" href={selectedProject.github} target="_blank" rel="noopener noreferrer">
+                                            <FaGithub  /> 
+                                        </a>
+                                    )}
+                                </div>
                                 <button
                                     onClick={() => setSelectedProject(null)} 
-                                    className="absolute top-0 right-4 text-grayColor2 hover:text-black text-2xl"
+                                    className="absolute top-0 right-4 text-grayColor2 hover:text-black text-xl sm:text-2xl"
                                 >
                                     &times;
                                 </button>

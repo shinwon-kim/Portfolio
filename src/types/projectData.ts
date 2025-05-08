@@ -10,4 +10,6 @@ export interface ProjectsData {
     img?: string;
     imgDescription?: string;
     screenshots: string[];
+    demo?: string;
+    github?: string;
 };
