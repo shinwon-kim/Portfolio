@@ -24,8 +24,8 @@ const BubbleButton = () => {
     // Top Left Circle Animation
     tl1.to($circlesTopLeft, {
       duration: 1,
-      x: () => window.innerWidth < 768 ? -15 : -25,
-      y: () => window.innerWidth < 768 ? 35 : 25,
+      x: () => window.innerWidth < 768 ? -10 : -25,
+      y: () => window.innerWidth < 768 ? 30 : 25,
       ease: Elastic.easeOut.config(0.1, 0.7),
     })
       .to($circlesTopLeft[0], { scale: 0.2, x: "+=2", y: "-=15", duration: 0.1 })
@@ -39,7 +39,7 @@ const BubbleButton = () => {
     tl2.to($circlesBottomRight, {
       duration: 1,
       x: () => window.innerWidth < 768 ? 17 : 20,
-      y: () => window.innerWidth < 768 ? 35 : 30,
+      y: () => window.innerWidth < 768 ? 20 : 30,
       ease: Elastic.easeOut.config(0.1, 0.7),
     })
       .to($circlesBottomRight[0], { scale: 0.7, x: "-=6", y: "+=8", duration: 0.1 })
