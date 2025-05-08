@@ -9,7 +9,7 @@ const Nav = (): JSX.Element => {
     };
 
     return (
-        <nav className="fixed flex justify-end w-full max-w-[1200px] gap-4 p-4 text-sm font-bold cursor-pointer py-2 z-50 w-full bg-whiteColor/80">
+        <nav className="fixed flex justify-end w-full max-w-[1200px] gap-4 p-4 text-sm font-bold cursor-pointer py-2 z-50 bg-whiteColor/80 backdrop-blur">
             {activeLink !== "home" && (
                 <Link to="home" smooth={true} duration={500} spy={true} onSetActive={() => setActiveLink("home")} 
                     className={`hover:bg-grayColor/60 px-1 rounded-sm ${activeLink==="home" ? "text-blueColor": ""}`} onClick={()=>handleClick("home")}> Home
