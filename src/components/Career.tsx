@@ -45,7 +45,7 @@ const Career = (): JSX.Element => {
                 {careerData.map((item, index) => (
                     <div
                         key={index}
-                        className="career-card w-full lg:max-w-4xl bg-white shadow-xl p-3 mb:p-6 rounded-lg grid grid-cols-[1fr_4fr] gap-4"
+                        className="career-card w-full lg:max-w-4xl bg-white shadow-xl p-3 lg:p-6 rounded-lg grid grid-cols-[1fr_4fr] gap-4"
                     >
                         <div className="flex items-center gap-3">
                             <TiStarburst className="text-mb text-blueColor"/>
