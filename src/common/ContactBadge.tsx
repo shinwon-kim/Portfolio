@@ -17,7 +17,7 @@ const ContactBadge=(): JSX.Element =>{
     }
     
     return(
-        <div className="fixed bottom-10 right-1.5 flex flex-col gap-2 lg:right-30 lg:gap-3">
+        <div className="fixed bottom-10 flex flex-col gap-3 lg:gap-4 right-2 md:right-3 lg:right-8 xl:right-32">
             {/* 이메일 아이콘 */}
             <div 
                 className="relative"
@@ -35,7 +35,7 @@ const ContactBadge=(): JSX.Element =>{
                     )}
                     <button 
                         onClick={handleCopy}
-                        className="w-10 h-10 bg-grayColor/80 rounded-full flex justify-center items-center hover:animate-pulse transition"
+                        className="w-10 h-10 sm:w-11 sm:h-11 lg:w-13 lg:h-13 bg-grayColor/80 rounded-full flex justify-center items-center hover:animate-pulse transition"
                         // title="이메일 복사"
                     >
                         <MdOutlineEmail className="text-2xl fill-navyColor"></MdOutlineEmail>
@@ -63,7 +63,7 @@ const ContactBadge=(): JSX.Element =>{
                     href={githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-grayColor/80 rounded-full flex justify-center items-center hover:animate-pulse transition"
+                    className="w-10 h-10 sm:w-11 sm:h-11 lg:w-13 lg:h-13 bg-grayColor/80 rounded-full flex justify-center items-center hover:animate-pulse transition"
                 >
                     <IoLogoGithub className="text-2xl fill-navyColor"></IoLogoGithub>
                 </a>
