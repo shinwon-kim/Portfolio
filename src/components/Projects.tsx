@@ -60,12 +60,12 @@ const Projects = (): JSX.Element => {
             </div>
             <div className="w-full flex justify-center">
 
-                <div ref={containerRef} className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+                <div ref={containerRef} className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
                     {
                         projects.map((project) => (
                             <div
                                 key={project.id}
-                                className="project-card flex flex-col justify-between text-center w-[330px] xl:w-full h-50 lg:h-60 bg-white border-2 border-gray-100 rounded-lg px-2 py-3 transition-all duration-300 cursor-pointer shadow-xl hover:-translate-y-1 hover:border-blueColor"
+                                className="project-card flex flex-col justify-between text-center w-full h-48 xl:h-52 bg-white border-2 border-gray-100 rounded-lg px-2 py-3 transition-all duration-300 cursor-pointer shadow-xl hover:-translate-y-1 hover:border-blueColor"
                                 onClick={() => handleProjectClick(project)}
                             >
                                 <div>
