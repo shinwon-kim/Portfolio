@@ -38,7 +38,7 @@ const ProjectDetail = ({project}: ProjectDetailProps):JSX.Element =>{
                     <TechLogo 
                         logo={project.techStack} 
                         className="!flex !flex-wrap !gap-1 lg:!gap-3"
-                        imgClassName="!w-6 !h-6 lg:!w-8 lg:!h-8">
+                        imgClassName="!size-6 lg:!size-8">
                     </TechLogo>
                 </div>
 

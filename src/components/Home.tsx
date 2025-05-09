@@ -83,7 +83,7 @@ const Home = (): JSX.Element => {
             ))}
             <span
               ref={ballRef}
-              className="absolute w-3 h-3 lg:w-4 lg:h-4 opacity-0 bg-[#0061FF] rounded-full bottom-7 lg:bottom-8 left-0 z-10"
+              className="absolute size-3 lg:size-4 opacity-0 bg-[#0061FF] rounded-full bottom-7 lg:bottom-8 left-0 z-10"
             />
           </span>
           입니다

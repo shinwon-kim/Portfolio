@@ -125,7 +125,7 @@ const BubbleButton = () => {
     [...Array(3)].map((_, i) => (
       <span
         key={i}
-        className={`absolute w-[20px] h-[20px] z-10 rounded-full bg-blueColor transition-all ${className}`}
+        className={`absolute size-[20px] z-10 rounded-full bg-blueColor transition-all ${className}`}
         ref={(el) => {
           if (el) refArray.current[i] = el;
         }}
@@ -179,7 +179,7 @@ const BubbleButton = () => {
           {createCircles(topLeftCircles, `absolute -top-[140px] -left-[3px] ${isHovered ? "opacity-100" : "opacity-0"}`)}
           <div
             ref={effectRef}
-            className="absolute top-1/2 left-1/2 w-[270px] h-[270px] sm:w-[285px] sm:h-[285px] lg:w-[300px] lg:h-[300px] -translate-x-1/2 -translate-y-1/2"
+            className="absolute top-1/2 left-1/2 size-[270px] sm:size-[285px] lg:size-[300px] -translate-x-1/2 -translate-y-1/2"
           >
             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
               <g transform="translate(100 100)">
