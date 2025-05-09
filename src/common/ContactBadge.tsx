@@ -29,7 +29,7 @@ const ContactBadge=(): JSX.Element =>{
                 }}
             >
                     {showEmailTooltip && (
-                        <div className="absolute top-1/2 -translate-y-1/2 right-12 bg-black/75 text-white text-xs px-2 py-1 rounded shadow-lg mb-1 whitespace-nowrap">
+                        <div className="absolute top-1/2 -translate-y-1/2 right-12 lg:right-15 bg-black/75 text-white text-xs px-2 py-1 rounded shadow-lg mb-1 whitespace-nowrap">
                             {copied ? "이메일이 복사되었습니다" : email}
                         </div>
                     )}
@@ -54,7 +54,7 @@ const ContactBadge=(): JSX.Element =>{
                 }}
             >
                 {showGithubTooltip && (
-                    <div className="absolute top-1/2 -translate-y-1/2 right-12 bg-black/75 text-white text-xs px-2 py-1 rounded shadow-lg mb-1 whitespace-nowrap">
+                    <div className="absolute top-1/2 -translate-y-1/2 right-12 lg:right-15 bg-black/75 text-white text-xs px-2 py-1 rounded shadow-lg mb-1 whitespace-nowrap">
                         {"/shinwon-kim"}
                     </div>
                 )}
