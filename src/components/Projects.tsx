@@ -88,7 +88,7 @@ const Projects = (): JSX.Element => {
                     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur">
                         <div className="bg-white py-7 px-1 sm:rounded-lg overflow-hidden w-full max-w-[1000px] h-screen sm:mx-10 sm:max-h-[90vh] shadow-xl relative">
                             <div className="overflow-y-auto max-h-[calc(90vh-5px)] sm:max-h-[calc(90vh-48px)] px-3 lg:px-5 pb-8">
-                                <div className="flex gap-4 absolute top-2.5 left-4.5 text-grayColor2 text-sm sm:text-base">
+                                <div className="flex gap-4 absolute top-2.5 left-4.5 text-blueColor text-base lg:text-lg">
                                     {selectedProject?.demo && (
                                         <a className="hover:text-black" href={selectedProject.demo} target="_blank" rel="noopener noreferrer" title="Demo Link">
                                             <FaLink />
