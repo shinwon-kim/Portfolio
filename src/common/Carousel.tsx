@@ -36,7 +36,7 @@ const Carousel = ({slides}: CarouselProps):JSX.Element => {
                 <IoIosArrowDropleft className="text-navyColor text-xl"/>
             </button>
 
-            <div className="w-full m-2 p-1 rounded-5 overflow-hidden">
+            <div className="w-full rounded-5 overflow-hidden">
                 <div className="flex transition-transform duration-700 ease-in-out" 
                     style={{ transform: `translateX(-${currentSlide * 100}%)` }}
                 >
@@ -71,7 +71,7 @@ const Carousel = ({slides}: CarouselProps):JSX.Element => {
                 <IoIosArrowDropright className="text-navyColor text-xl" />
             </button>
 
-            <div className="absolute z-30 flex -translate-x-1/2 -bottom-2 lg:-bottom-6 left-1/2 gap-3 p-2">
+            <div className="absolute z-30 flex -translate-x-1/2 -bottom-5 lg:-bottom-6 left-1/2 gap-3 p-2">
                 {
                     slides.map((_,index)=>(
                         <button key={index} type="button" 
