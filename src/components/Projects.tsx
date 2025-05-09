@@ -60,23 +60,23 @@ const Projects = (): JSX.Element => {
             </div>
             <div className="w-full flex justify-center">
 
-                <div ref={containerRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div ref={containerRef} className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
                     {
                         projects.map((project) => (
                             <div
                                 key={project.id}
-                                className="project-card flex flex-col justify-between text-center w-full sm:w-[350px] h-50 lg:h-60 bg-white border-2 border-gray-100 rounded-lg px-2 py-3 transition-all duration-300 cursor-pointer shadow-xl hover:-translate-y-1 hover:border-blueColor"
+                                className="project-card flex flex-col justify-between text-center w-[330px] xl:w-full h-50 lg:h-60 bg-white border-2 border-gray-100 rounded-lg px-2 py-3 transition-all duration-300 cursor-pointer shadow-xl hover:-translate-y-1 hover:border-blueColor"
                                 onClick={() => handleProjectClick(project)}
                             >
                                 <div>
-                                    <p className="mt-1 mb-4 text-mb lg:text-lg font-bold">{project.title}</p>
-                                    <p className="text-xs lg:text-sm">{project.preview}</p>
+                                    <p className="mt-1 mb-4 text-mb xl:text-lg font-bold">{project.title}</p>
+                                    <p className="text-xs xl:text-sm">{project.preview}</p>
                                 </div>
                                     
                                 <TechLogo 
                                     logo={project.techStack} 
                                     className="!flex !flex-wrap !gap-0 self-center"
-                                    imgClassName="!w-6 !h-6 lg:!w-7 lg:!h-7 !shadow-md">
+                                    imgClassName="!size-6 xl:!size-7 !shadow-md">
                                 </TechLogo>
                             </div>
                         ))
@@ -86,9 +86,9 @@ const Projects = (): JSX.Element => {
             {
                 selectedProject  && (
                     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur">
-                        <div className="bg-white py-7 px-1 sm:rounded-lg overflow-hidden w-full max-w-[1000px] h-screen sm:mx-10 sm:max-h-[90vh] shadow-xl relative">
-                            <div className="overflow-y-auto max-h-[calc(90vh-5px)] sm:max-h-[calc(90vh-48px)] px-3 lg:px-5 pb-8">
-                                <div className="flex gap-4 absolute top-2.5 left-4.5 text-blueColor text-base lg:text-lg">
+                        <div className="bg-white py-8 px-1 sm:rounded-lg overflow-hidden w-full max-w-[1000px] h-screen sm:mx-10 sm:max-h-[90vh] shadow-xl relative">
+                            <div className="overflow-y-auto max-h-[calc(90vh-4px)] sm:max-h-[calc(90vh-48px)] px-3 lg:px-5">
+                                <div className="flex gap-4 absolute top-2.5 left-4.5 text-blueColor text-lg lg:text-xl">
                                     {selectedProject?.demo && (
                                         <a className="hover:text-black" href={selectedProject.demo} target="_blank" rel="noopener noreferrer" title="Demo Link">
                                             <FaLink />
