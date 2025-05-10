@@ -23,6 +23,20 @@ const Projects = (): JSX.Element => {
         fetchData();
     }, [])
 
+    useEffect(() =>{
+        const handlekeyDown = (e: KeyboardEvent) => {
+            if (e.key === "Escape") {
+                setSelectedProject(null);
+            }
+        };
+
+        window.addEventListener("keydown", handlekeyDown);
+        
+        return () => {
+            window.removeEventListener("keydown", handlekeyDown);
+        }
+    }, [])
+
     useGSAP(() => {
         if (!containerRef.current) return;
         const cards = gsap.utils.toArray<HTMLElement>(".project-card");
@@ -85,8 +99,16 @@ const Projects = (): JSX.Element => {
             </div>
             {
                 selectedProject  && (
-                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur">
-                        <div className="bg-white py-8 px-1 sm:rounded-lg overflow-hidden w-full max-w-[1000px] h-screen sm:mx-10 sm:max-h-[90vh] shadow-xl relative">
+                    <div 
+                        className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur"
+                        onClick = {() => {
+                            if (window.innerWidth >= 640) setSelectedProject(null);
+                        }}
+                    >
+                        <div 
+                            className="bg-white py-8 px-1 sm:rounded-lg overflow-hidden w-full max-w-[1000px] h-screen sm:mx-10 sm:max-h-[90vh] shadow-xl relative"
+                            onClick={(e) => e.stopPropagation()}
+                        >
                             <div className="overflow-y-auto max-h-[calc(90vh-4px)] sm:max-h-[calc(90vh-48px)] px-3 lg:px-5">
                                 <div className="flex gap-4 absolute top-2.5 left-4.5 text-blueColor text-lg lg:text-xl">
                                     {selectedProject?.demo && (
