@@ -45,14 +45,14 @@ const AboutMe = (): JSX.Element => {
     <Layout id="aboutMe">
       <h1 className="mb-6 text-center">About Me</h1>
       <div ref={containerRef}>
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-14">
           {/* Education */}
-          <div className="grid grid-cols-[1fr_2fr] gap-3.5 animate-in">
-            <p className="px-7 py-9 text-xl sm:px-13 sm:text-2xl lg:px-15 lg:py-10 lg:text-3xl font-bold bg-blueColor rounded-sm text-white flex justify-center items-center shadow-lg">
+          <div className="grid grid-cols-[1fr_2fr] gap-4 animate-in">
+            <p className="px-7 py-9 text-xl sm:px-13 sm:text-2xl lg:px-15 lg:py-10 lg:text-3xl font-bold bg-blueColor rounded-sm text-white flex justify-center items-center">
               Education
             </p>
             <div className="flex flex-col justify-center">
-              <p className="text-mb font-semibold">아주대학교</p>
+              <p className="text-md mb-2 font-semibold">아주대학교</p>
               <p className="text-xs lg:text-sm">
                 불어불문학과 전공 
                 <br/>
@@ -62,13 +62,13 @@ const AboutMe = (): JSX.Element => {
           </div>
 
           {/* Skills & Tools */}
-          <div className="grid grid-cols-[2fr_1fr] gap-3.5 animate-in">
+          <div className="grid grid-cols-[2fr_1fr] gap-2 lg:gap-4 animate-in">
             {/* <p className="py-10 px-15 text-3xl font-bold bg-[#343434] rounded-sm text-white flex justify-center items-center order-2 shadow-lg"> */}
-            <p className="px-5 py-9 text-xl sm:px-13 sm:text-2xl lg:px-15 lg:py-10 lg:text-3xl font-bold bg-[#132351] rounded-sm text-white flex justify-center items-center order-2 shadow-lg">
+            <p className="px-5 py-9 text-xl sm:px-13 sm:text-2xl lg:px-15 lg:py-10 lg:text-3xl font-bold bg-navyColor rounded-sm text-white flex justify-center items-center order-2">
               Skills & Tools
             </p>
             <div className="flex justify-end items-center">
-              <TechLogo
+              <TechLogo className="gap-2 lg:gap-4" imgClassName="!size-7 lg:!size-9 "
                 logo={[
                   "react.png",
                   "tailwindcss.png",
@@ -86,8 +86,8 @@ const AboutMe = (): JSX.Element => {
           </div>
 
           {/* Certificate */}
-          <div className="grid grid-cols-[1fr_2fr] gap-3.5 animate-in">
-            <p className="px-7 py-7 text-xl sm:px-13 sm:text-2xl lg:px-15 lg:py-10 lg:text-3xl font-bold bg-grayColor3 rounded-sm flex justify-center items-center shadow-lg">
+          <div className="grid grid-cols-[1fr_2fr] gap-4 animate-in">
+            <p className="px-7 py-7 text-xl sm:px-13 sm:text-2xl lg:px-15 lg:py-10 lg:text-3xl font-bold bg-grayColor3 rounded-sm flex justify-center items-center">
               Certificate
             </p>
             <div className="">
