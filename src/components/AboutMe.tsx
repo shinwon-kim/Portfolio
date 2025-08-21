@@ -1,21 +1,17 @@
 import { JSX, useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import { abouteMeTrans } from "./AboutMeTrans";
 import Layout from "./Layout";
 import TechLogo from "../common/TechLogo";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-const certificate = [
-  { name: "프론트엔드 교육 과정", detail: "제로베이스 부트캠프 (2025.03 수료)" },
-  { name: "정보처리기사", detail: "한국산업인력공단 (2024.12 취득)" },
-  { name: "Toeic Speaking AL", detail: "ETS (2024.03 취득)" },
-  { name: "Delf A2", detail: "France Education International (2020.01 취득)" },
-];
-
 const AboutMe = (): JSX.Element => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const userLang = navigator.language.startsWith("ko") ? "ko" : "en";
+  const t = abouteMeTrans[userLang]; 
 
   useGSAP(() => {
     const sections = gsap.utils.toArray<HTMLElement>(".animate-in");
@@ -54,11 +50,9 @@ const AboutMe = (): JSX.Element => {
               Education
             </p>
             <div className="flex flex-col justify-center">
-              <p className="text-md mb-2 font-semibold">아주대학교</p>
+              <p className="text-md mb-2 font-semibold">{t.education.school}</p>
               <p className="text-xs lg:text-sm">
-                불어불문학과 전공 
-                <br/>
-                소프트웨어 및 컴퓨터 공학과 복수전공
+                {t.education.major}
               </p>
             </div>
           </div>
@@ -96,7 +90,7 @@ const AboutMe = (): JSX.Element => {
               Certificate
             </p>
             <div className="">
-              {certificate.map((item, index) => (
+              {t.certificate.map((item, index) => (
                 <div key={index} className="mb-2">
                   <p className="text-base font-semibold">{item.name}</p>
                   <p className="text-xxs text-grayColor2">{item.detail}</p>
@@ -104,7 +98,6 @@ const AboutMe = (): JSX.Element => {
               ))}
             </div>
           </div>
-
         </div>
       </div>
     </Layout>
