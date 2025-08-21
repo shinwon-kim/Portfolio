@@ -11,13 +11,14 @@ interface ProjectDetailProps{
 const ProjectDetail = ({project}: ProjectDetailProps):JSX.Element =>{
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
+    const userLang = navigator.language.startsWith("ko") ? "ko" : "en";
 
     return(
         <>
-            <h3 className="flex justify-center items-center mb-3 mt-1 text-base lg:text-xl font-bold">{project.title}</h3>
+            <h3 className="flex justify-center items-center mb-3 mt-1 text-base lg:text-xl font-bold">{project.title[userLang]}</h3>
             <div className="flex gap-4 justify-center items-center mb-10 text-xs lg:text-sm text-grayColor2">
-                <p>{project.count}</p>
-                <p>{project.period}</p>
+                <p>{project.count[userLang]}</p>
+                <p>{project.period[userLang]}</p>
             </div>
             <div className="flex flex-col gap-8 lg:gap-10">
                 <div>
@@ -26,7 +27,7 @@ const ProjectDetail = ({project}: ProjectDetailProps):JSX.Element =>{
                         <h4 className="text-base lg:text-lg text-navyColor">Project Overview</h4>
                     </div> 
                     <p className="text-sm lg:text-base">
-                        {project.description}
+                        {project.description[userLang]}
                     </p>
                 </div>
 
@@ -48,7 +49,7 @@ const ProjectDetail = ({project}: ProjectDetailProps):JSX.Element =>{
                         <h4 className="text-base lg:text-lg text-navyColor">Role & Responsibilities</h4>
                     </div>
                     <div className="text-sm lg:text-base">
-                        {project.myRole.split('\n').map((line, index) => {
+                        {project.myRole[userLang].split('\n').map((line, index) => {
                             const isSubItem = line.trim().startsWith('-');
 
                             const match = line.trim().match(/^(-|\d+\.)\s?(.*)$/);
@@ -91,7 +92,7 @@ const ProjectDetail = ({project}: ProjectDetailProps):JSX.Element =>{
                                         setSelectedImage(`${project.img}`);
                                     }}
                                     />
-                                <p className="text-xxs">{project.imgDescription}</p>
+                                <p className="text-xxs">{project.imgDescription?.[userLang]}</p>
                             </div>
                         )
                     }

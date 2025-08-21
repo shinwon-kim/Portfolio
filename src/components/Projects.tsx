@@ -14,6 +14,7 @@ const Projects = (): JSX.Element => {
     const containerRef = useRef<HTMLDivElement>(null);
     const [projects, setProjects] = useState<ProjectsData[]>([]);
     const [selectedProject, setSelectedProject] = useState<ProjectsData | null>(null); // 선택된 프로젝트 데이터 상태 추가
+    const userLang = navigator.language.startsWith("ko") ? "ko" : "en";
 
     useEffect(()=>{
         const fetchData = async () => {
@@ -70,7 +71,7 @@ const Projects = (): JSX.Element => {
         <Layout id="projects" className="">
             <div className="mb-6 text-center">
                 <h1 className="mb-2">Projects</h1>
-                <p className="text-xs text-grayColor2">클릭 시 세부 내용을 확인 할  수 있습니다.</p>
+                <p className="text-xs text-grayColor2">{userLang === "ko" ? "클릭 시 세부 내용을 확인 할  수 있습니다." : "Click to view project details."}</p>
             </div>
             <div className="w-full flex justify-center">
 
@@ -83,8 +84,8 @@ const Projects = (): JSX.Element => {
                                 onClick={() => handleProjectClick(project)}
                             >
                                 <div>
-                                    <p className="mt-1 mb-4 text-mb xl:text-lg font-bold">{project.title}</p>
-                                    <p className="text-xs xl:text-sm">{project.preview}</p>
+                                    <p className="mt-1 mb-4 text-mb xl:text-lg font-bold">{project.title[userLang]}</p>
+                                    <p className="text-xs xl:text-sm">{project.preview[userLang]}</p>
                                 </div>
                                     
                                 <TechLogo 
