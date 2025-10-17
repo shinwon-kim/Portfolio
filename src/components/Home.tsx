@@ -69,7 +69,7 @@ const Home = (): JSX.Element => {
         className="relative flex flex-col gap-5 justify-center items-center"
       >
         <h1 className="text-xl sm:text-3xl mt-5 font-bold text-nowrap">
-          {t.role}{" "}
+          {/* {t.role}{" "} */}
           <span className="relative inline-flex" ref={nameRef}>
             {t.name.map((char, i) => (
               <span
